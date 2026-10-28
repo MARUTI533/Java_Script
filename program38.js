@@ -1,0 +1,52 @@
+/*
+
+ Q.accept one number from user and print that number of * on screen .
+
+*/
+
+
+const readline=require('readline');
+r1=readline.createInterface({
+
+  input:process.stdin,
+  output:process.stdout
+});
+
+function display(ino)
+
+{
+
+  let icnt=0;
+
+  icnt=1;
+
+  if(ino<0)
+  {
+    ino=-ino;
+  }
+
+  while (icnt<=ino)
+    
+  {
+    console.log("*\n");
+    icnt++;
+    
+  }
+}
+
+
+function main()
+
+{
+
+  r1.question("enter number:\n",function(input){
+
+    let icint=Number(input);
+
+    display(icint);
+
+    r1.close();
+  });
+}
+
+main();
